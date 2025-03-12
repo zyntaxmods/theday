@@ -1,0 +1,133 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+html,body{
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+body{
+  background: linear-gradient(100deg, #E533C4, #DD44C1, #E039C1);
+  font-family: monospace;
+}
+.mainCont{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin:200px auto;
+  transition: 1s ease-in-out;
+}
+.cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+.imgCont img{
+  width:300px;
+  height: 300px;
+}
+.buttonCont{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 10px;
+}
+.buttonCont button{
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border:1px solid transparent;
+  box-shadow:0px 0px 2px black;
+  background: linear-gradient(100deg, #FC00FF, #E749EA, #E389E4);
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  transition: 0.5s ease-out;
+}
+.buttonCont button:hover{
+  box-shadow: 0px 0px 20px aqua;
+  transition: 0.5s ease-in;
+  color: aqua;
+  transform: scale(1.1);
+}
+.alertCont{
+  position: fixed;
+  border: 1px solid red;
+  box-shadow: 0px 0px 2px red;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 20px auto;
+  padding: 10px 10px;
+  border-radius: 10px;
+  background: white;
+  color:red;
+  display: none;
+}
+@keyframes show{
+  from{
+    left:2000px;
+  }
+  to{
+    left: 30px;
+  }
+}
+@keyframes hide{
+  from{
+    left:30px;
+  }
+  to{
+    left:2000px;
+  }
+}
+.mainAlert{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainAlert h1{
+  text-align: center;
+}
+.mainConf{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  color:white;
+  font-size: 25px;
+  border:1px solid white;
+  font-family: monospace;
+  margin:200px auto;
+  padding:10px 10px;
+  border-radius: 20px;
+  box-shadow:0px 0px 2px black;
+}
+.conf{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  text-align: center;
+  white-space: normal;
+}
+.conf p{
+  text-shadow:0px 0px 2px black;
+  font-weight: 600;
+}
+@media screen and (max-width: 500px){
+  .buttonCont button{
+    font-size: 20px;
+  }
+}
