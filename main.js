@@ -3,11 +3,13 @@ var exitCount = 0;
 
 function showBox(){
   const alertBox = document.getElementById("alertBox");
+  const button = document.getElementById("jee");
   alertBox.style.display = "flex"
   alertBox.style.animation = "show 1s forwards";
-  
+  button.disabled = true;
   setTimeout(() => {
     alertBox.style.animation = "hide 1s forwards";
+    button.disabled = false;
     setTimeout(() => {
       alertBox.style.display = "none";
     }, 500)
